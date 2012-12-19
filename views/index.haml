@@ -1,0 +1,27 @@
+.span12
+	:javascript
+			$(document).ready(function() {
+				//alert("hui");
+				$('#editpole').wysihtml5();
+			});	
+	.row
+		.span6
+			- if ( @started !=1 )
+				%form{:action => "/start", :method => "GET"}
+					%input.btn.btn-primary{:type=> "submit", :value => "Работать работу"}
+			- else	
+				%form{:action => "/end", :method => "GET"}
+					%input.btn.btn-primary{:type=> "submit", :value => "Перестать работать работу"}
+					%textarea#editpole{:name => "comments", :style => "width: 100%; height: 200px;"}
+		.span6.logout 
+			%a.btn.btn-danger{:href => "/logout"}Logout
+/ .span12
+/ 	.row
+/ 		- @workingtimes.each do |wtimes|
+/ 			.row
+/ 				.span3
+/ 					%h6=wtimes[:starttime]
+/ 				.span3
+/ 					%h6=wtimes[:endtime]
+/ 				.span6
+/ 					%h6=wtimes[:comment]

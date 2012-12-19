@@ -1,0 +1,14 @@
+!!!
+%html
+	%head
+		%meta{:'http-equiv' => 'Content-Type', :content => 'text/html; charset=UTF-8'}
+		%link{:rel => 'stylesheet', :href => '/css/bootstrap.min.css'}
+		%link{:rel => 'stylesheet', :href => '/css/bootstrap-wysihtml5.css'}
+		%link{:rel => 'stylesheet', :href => '/css/base.css'}
+		%script{:rel => 'javascript', :src => '/js/wysihtml5-0.3.0.min.js'}
+		%script{:rel => "javascript", :src => "/js/jquery1.8.2.js"}
+		%script{:rel => 'javascript', :src => '/js/bootstrap.min.js'}
+		%script{:rel => 'javascript', :src => '/js/bootstrap-wysihtml5.js'}
+	%body
+		.container
+			.row= yield
